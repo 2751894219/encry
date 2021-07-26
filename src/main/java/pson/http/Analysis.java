@@ -5,13 +5,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class Analysis {
-    public static String analysis(String result){
+    public static String analysisName(String result){
         JsonParser parser = new JsonParser();
         JsonObject jsonObject  = parser.parse(result).getAsJsonObject();
-        JsonObject data = jsonObject.get("data").getAsJsonObject();
-        JsonObject data1 = data.get("data").getAsJsonObject();
-        String keyWord = data1.get("keyWord").getAsString();
-
+        String keyWord = jsonObject.get("data").getAsString();
         return keyWord;
     }
 }

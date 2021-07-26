@@ -1,4 +1,4 @@
-package pson.test;
+package pson.func;
 
 import pson.http.Analysis;
 import pson.http.HttpClient;
@@ -15,9 +15,13 @@ public class Algorithm {
         return original;
     }
 
-    public static String getKey(int id) {
-        String result = HttpClient.getJsonByID(id);
-        String keyWord = Analysis.analysis(result);
+    public static String getKey(String name) {
+        String result = HttpClient.getJsonByName(name);
+        String keyWord = Analysis.analysisName(result);
         return keyWord;
+    }
+
+    public static int check(String userName, String keyName) {
+        return 0;
     }
 }

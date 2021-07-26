@@ -10,9 +10,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class HttpClient {
-    public static String getJsonByID(int id) {
-        String url = "http://172.22.100.250:8080/keys";
-        String param = "{\"name\":\"test_key_0\"}";
+    public static String getJsonByName(String name) {
+        String url = "http://49.235.118.174:8080/keys";
+        String param = "{\"name\":\"" + name + "\"}";
         String result = HttpClient.doPost(url, param);
         return result;
     }
