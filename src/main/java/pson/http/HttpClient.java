@@ -17,6 +17,13 @@ public class HttpClient {
         return result;
     }
 
+    public static String getPerPermission(String keyName, String userName) {
+        String url = "http://49.235.118.174:8080/permission/validation";
+        String param = "{\"keyName\":\"" + keyName + "\",\"userName\":\"" + userName +  "\"}";
+        String result = HttpClient.doPost(url, param);
+        return result;
+    }
+
     private static String doPost(String httpUrl, String param) {
         HttpURLConnection connection = null;
         InputStream is = null;

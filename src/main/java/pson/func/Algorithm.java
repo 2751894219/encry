@@ -21,7 +21,9 @@ public class Algorithm {
         return keyWord;
     }
 
-    public static int check(String userName, String keyName) {
-        return 0;
+    public static int check(String keyName, String userName) {
+        String result = HttpClient.getPerPermission(keyName, userName);
+        int i = Analysis.analysisPermission(result);
+        return i;
     }
 }
