@@ -3,7 +3,6 @@ import pson.http.HttpClient;
 
 public class test {
     public static void main(String[] args) {
-        String result = Algorithm.getKey("test_key_0");
-        System.out.println(result);
+        System.out.println(Algorithm.check("test_key_0","用户1"));
     }
 }

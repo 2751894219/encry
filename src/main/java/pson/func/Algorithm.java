@@ -23,7 +23,9 @@ public class Algorithm {
 
     public static int check(String keyName, String userName) {
         String result = HttpClient.getPerPermission(keyName, userName);
-        int i = Analysis.analysisPermission(result);
-        return i;
+        if (result == null)
+            return 0;
+        else
+            return 1;
     }
 }
